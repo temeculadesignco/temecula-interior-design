@@ -17,7 +17,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v=3">
 </head>
 <body class="inner">
@@ -46,14 +46,15 @@
     <div class="wrap">
       <p class="eyebrow">The Process</p>
       <h1>One residence,<br>start to finish.</h1>
-      <p>A single Temecula Valley estate — from a bare vineyard parcel to completion day. Designed, drawn, managed, and furnished by one studio.</p>
+      <p class="how">How it Happens</p>
+      <p>A single Temecula Valley estate — from a bare vineyard parcel to completion day. Designed, drawn, managed, and furnished by one firm.</p>
     </div>
   </section>
 
   <section class="pad-sm">
     <div class="wrap intro-wrap">
       <div class="intro-im"><img src="/estate-site-before.jpg" alt="Bare vineyard build site in Temecula wine country before construction" loading="lazy"></div>
-      <p class="lede">Most projects lose something in the handoffs — the architect draws it, a builder interprets it, and a third party furnishes it months later. We work the other way. The plan set for this residence was produced by Temecula Interior Design, and the same studio carried it through construction management and fulfillment to the day it was finished. What follows is that project, phase by phase, and the reasoning behind each step.</p>
+      <p class="lede">Most projects lose something in the handoffs — the architect draws it, a builder interprets it, and a third party furnishes it months later. We work the other way. The plan set for this residence was produced by Temecula Interior Design, and the same firm carried it through construction management and fulfillment to the day it was finished. What follows is that project, phase by phase, and the reasoning behind each step.</p>
     </div>
   </section>
 
@@ -104,7 +105,7 @@
         <div class="ph-txt">
           <p class="ph-num">Phase 06</p>
           <h2>Completion Day</h2>
-          <p>Punch, final styling, and handover. The residence reads as a single continuous idea because the plans, the project management, and the fulfillment all came from the same studio. One accountable team from first sketch to the day the keys change hands.</p>
+          <p>Punch, final styling, and handover. The residence reads as a single continuous idea because the plans, the project management, and the fulfillment all came from the same firm. One accountable team from first sketch to the day the keys change hands.</p>
         </div>
       </article>
     </div>
@@ -121,6 +122,25 @@
 </main>
 
 <style>
+.phero .how{
+  font-family:'Parisienne',cursive;
+  font-size:clamp(30px,3.4vw,40px);
+  line-height:1.05;
+  color:var(--gold-light);
+  max-width:none;
+  margin:22px 0 4px;
+  display:inline-block;
+  letter-spacing:.005em;
+  text-shadow:0 1px 18px rgba(201,164,88,.18);
+}
+.phero .how:after{
+  content:"";
+  display:block;
+  width:58px;height:1px;
+  margin-top:9px;
+  background:linear-gradient(90deg,var(--gold) 0%,rgba(201,164,88,0) 100%);
+}
+@media(max-width:600px){ .phero .how{font-size:28px;margin-top:18px} }
 .intro-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .intro-im img{width:100%;height:340px;object-fit:cover;display:block}
 .lede{font-family:var(--serif);font-size:22px;line-height:1.55;color:var(--ink)}
