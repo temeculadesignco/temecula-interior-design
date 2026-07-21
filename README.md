@@ -9,3 +9,5 @@ Static website for Temecula Interior Design - interior design, architectural des
 ## Editing
 
 Change any file and commit - Vercel republishes automatically in a few seconds. Photos are referenced in the HTML files; swap the image and commit to update the live site.
+
+All site imagery is original work by Michael Ornelas / Temecula Interior Design.
