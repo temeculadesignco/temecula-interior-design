@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Process | Architectural Design &amp; Build of a Residence — Temecula Interior Design</title>
-<meta name="description" content="How Temecula Interior Design carries a residence from drafted framework to completion — six phases of architectural design, project management, and fulfillment under one roof.">
+<title>The Process | Architectural Design &amp; Build of a Residence — Temecula Architectural Design</title>
+<meta name="description" content="How Temecula Architectural Design carries a residence from drafted framework to completion — six phases of architectural design, project management, and fulfillment under one roof.">
 <link rel="canonical" href="https://www.temeculainteriordesign.com/architectural-process">
 <meta name="robots" content="index,follow">
-<meta name="theme-color" content="#211F1F">
+<meta name="theme-color" content="#0a0a0b">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Temecula Interior Design">
 <meta property="og:title" content="The Process | Architectural Design &amp; Build of a Residence">
@@ -18,192 +18,198 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=5">
-</head>
-<body class="inner">
+<style>
+:root{
+  --black:#0a0a0b;--panel:#131315;--line:#26262a;--off-white:#f4f3ef;--gray:#9a9a9e;
+  --silver-1:#e8e9eb;--silver-2:#a7aab0;--silver-3:#6f7177;
+  --silver-grad:linear-gradient(120deg,#8b8e94 0%,#e9eaec 28%,#c2c4c8 52%,#f5f6f7 72%,#7d8086 100%);
+  --serif:'Cormorant Garamond',serif;--sans:'Inter',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--off-white);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+a{color:inherit}
+img{max-width:100%;display:block}
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="/">
-      <img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="30" height="38">
-      <span class="wm"><b>Temecula</b><span>Interior Design</span></span>
-    </a>
-    <nav class="links" id="navlinks">
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
+.a-nav{position:fixed;top:0;left:0;right:0;z-index:40;padding:26px 0;transition:background .4s,padding .4s;background:linear-gradient(180deg,rgba(10,10,11,.85),rgba(10,10,11,0))}
+.a-nav.scrolled{background:rgba(10,10,11,.92);backdrop-filter:blur(10px);padding:16px 0;border-bottom:1px solid var(--line)}
+.a-nav-inner{display:flex;align-items:center;justify-content:space-between}
+.a-brand{font-family:var(--serif);font-size:19px;letter-spacing:.03em;text-decoration:none;color:var(--off-white)}
+.a-brand b{font-weight:600}
+.a-brand span{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--silver-2);margin-top:2px}
+.a-nav-links{display:flex;align-items:center;gap:34px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.a-nav-links a{text-decoration:none;color:var(--gray);transition:color .25s}
+.a-nav-links a:hover{color:var(--off-white)}
+.a-nav-cta{border:1px solid var(--silver-3);padding:10px 22px;color:var(--off-white)!important;transition:.25s}
+.a-nav-cta:hover{background:var(--silver-grad);color:var(--black)!important;border-color:transparent}
+@media(max-width:720px){.a-nav-links a:not(.a-nav-cta){display:none}}
+
+.a-phero{position:relative;padding:210px 0 90px}
+.a-eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--silver-2);margin:0 0 18px;display:flex;align-items:center;gap:14px}
+.a-eyebrow:before{content:"";width:36px;height:1px;background:var(--silver-grad)}
+.a-phero h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.4vw,80px);line-height:1.04;margin:0 0 16px;letter-spacing:-.01em}
+.a-phero .how{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--silver-2);display:block;margin:14px 0 20px}
+.a-phero p{max-width:56ch;color:var(--gray);font-size:16px;font-weight:300}
+
+section{padding:100px 0}
+.section-sm{padding:70px 0}
+h2.a-h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,46px);line-height:1.1;margin:14px 0 0}
+.a-section-head{text-align:center;margin:0 auto 54px;max-width:640px}
+.a-section-head p.a-sub{max-width:62ch;margin:14px auto 0;color:var(--gray);font-size:15px}
+
+.a-intro-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.a-intro-im{overflow:hidden;background:var(--panel)}
+.a-intro-im img{width:100%;height:340px;object-fit:cover;filter:grayscale(25%) contrast(1.05) brightness(.85)}
+.a-lede{font-family:var(--serif);font-size:22px;line-height:1.55;color:var(--off-white);font-weight:400}
+
+.a-ph-sec{border-top:1px solid var(--line)}
+.a-ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
+.a-pcell{margin:0;background:var(--black)}
+.a-pcell-im{margin:0;position:relative;overflow:hidden;background:var(--panel)}
+.a-pcell-im img{width:100%;height:220px;object-fit:cover;display:block;filter:grayscale(25%) contrast(1.05);transition:transform 1.1s cubic-bezier(.2,.7,.3,1)}
+.a-pcell:hover .a-pcell-im img{transform:scale(1.07)}
+.a-pcell-im figcaption{position:absolute;left:0;right:0;bottom:0;padding:20px 22px;background:linear-gradient(180deg,transparent,rgba(10,10,11,.92))}
+.a-pcell-im figcaption span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--silver-2);display:block}
+.a-pcell-im figcaption b{font-family:var(--serif);font-size:19px;font-weight:500;display:block;margin-top:4px;color:var(--off-white)}
+.a-pcell p{color:var(--gray);line-height:1.7;font-size:14px;margin:0;padding:22px}
+
+.a-featured-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
+.a-featured-grid figure{margin:0;position:relative;overflow:hidden;background:var(--panel)}
+.a-featured-grid img{width:100%;height:200px;object-fit:cover;filter:grayscale(25%) contrast(1.05);transition:transform 1.1s cubic-bezier(.2,.7,.3,1)}
+.a-featured-grid figure:hover img{transform:scale(1.07)}
+.a-featured-grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;background:linear-gradient(180deg,transparent,rgba(10,10,11,.9));font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--silver-2)}
+
+.a-adu-sec{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.a-adu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);margin-top:50px}
+.a-adu-grid figure{margin:0;overflow:hidden;background:var(--black)}
+.a-adu-grid img{width:100%;height:240px;object-fit:cover;filter:grayscale(25%) contrast(1.05);transition:transform 1.1s cubic-bezier(.2,.7,.3,1)}
+.a-adu-grid figure:hover img{transform:scale(1.06)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:16px 30px;transition:.3s}
+.btn-silver{background:var(--silver-grad);color:var(--black);font-weight:500}
+.btn-silver:hover{filter:brightness(1.08)}
+
+.a-cta-sec{text-align:center}
+.a-cta-sec h2 em{font-style:italic;background:var(--silver-grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.a-cta-sec p{max-width:56ch;margin:18px auto 30px;color:var(--gray);font-size:15px}
+
+.a-foot{padding:50px 0;border-top:1px solid var(--line)}
+.a-foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center;font-size:12px;color:var(--silver-3)}
+.a-foot a{text-decoration:none;color:var(--silver-2)}
+.a-foot a:hover{color:var(--off-white)}
+
+@media(max-width:900px){
+  .a-intro-wrap{grid-template-columns:1fr;gap:28px}
+  .a-ph-grid{grid-template-columns:1fr 1fr}
+  .a-featured-grid{grid-template-columns:1fr 1fr}
+  .a-adu-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){.a-ph-grid{grid-template-columns:1fr}.a-featured-grid{grid-template-columns:1fr}.a-adu-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="a-nav" id="aNav">
+  <div class="wrap a-nav-inner">
+    <a class="a-brand" href="/"><b>Temecula</b> Interior Design<span>Temecula Architectural Design</span></a>
+    <nav class="a-nav-links">
       <a href="/architecture">Architecture</a>
-      <a href="/portfolio" class="active">Portfolio</a>
-      <a href="/about">About &amp; Contact</a>
-      <a href="/media">Media</a>
-      <a class="nav-cta" href="/about">Start a Project</a>
+      <a href="/">Main Site</a>
+      <a class="a-nav-cta" href="/architecture#inquire">Start a Project</a>
     </nav>
-    <button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main>
-  <section class="phero">
-    <div class="ghost">P</div>
+  <section class="a-phero">
     <div class="wrap">
-      <p class="eyebrow">The Process</p>
+      <p class="a-eyebrow">The Process</p>
       <h1>One residence,<br>start to finish.</h1>
-      <p class="how">How it Happens</p>
+      <span class="how">How it Happens</span>
       <p>A single Temecula Valley estate project — from a bare vineyard parcel through completion. Designed, drawn, managed, and furnished by one firm.</p>
     </div>
   </section>
 
-  <section class="pad-sm">
-    <div class="wrap intro-wrap">
-      <div class="intro-im"><img src="/estate-site-before.jpg" alt="Bare vineyard build site in Temecula wine country before construction" loading="lazy"></div>
-      <p class="lede">Most projects lose something in the handoffs — the architect draws it, a builder interprets it, and a third party furnishes it months later. We work the other way. The plan set for this residence was produced by Temecula Interior Design, and the same firm carries it through construction management and fulfillment. What follows is that project, phase by phase, and the reasoning behind each step.</p>
+  <section class="section-sm">
+    <div class="wrap a-intro-wrap">
+      <div class="a-intro-im"><img src="/estate-site-before.jpg" alt="Bare vineyard build site in Temecula wine country before construction" loading="lazy"></div>
+      <p class="a-lede">Most projects lose something in the handoffs — the architect draws it, a builder interprets it, and a third party furnishes it months later. We work the other way. The plan set for this residence was produced by Temecula Architectural Design, and the same firm carries it through construction management and fulfillment. What follows is that project, phase by phase, and the reasoning behind each step.</p>
     </div>
   </section>
 
-
-  <section class="pad-sm ph-sec">
+  <section class="section-sm a-ph-sec">
     <div class="wrap">
-      <div class="section-head center" style="margin:0 auto 44px;text-align:center">
-        <p class="eyebrow">The Sequence</p>
-        <h2>From bare site to completion.</h2>
-        <p style="max-width:62ch;margin:14px auto 0">One vantage point over a single Temecula Valley estate project, followed phase by phase.</p>
+      <div class="a-section-head">
+        <p class="a-eyebrow" style="justify-content:center">The Sequence</p>
+        <h2 class="a-h2">From bare site <em style="font-style:italic">to completion.</em></h2>
+        <p class="a-sub">One vantage point over a single Temecula Valley estate project, followed phase by phase.</p>
       </div>
-      <div class="ph-grid">
-        <article class="pcell"><figure class="pcell-im"><img src="/estate-phase-1-framework.jpg" alt="Phase 01 — Drafted Framework and Design Theory, Temecula Valley residence by Temecula Interior Design" loading="lazy"><figcaption><span>Phase 01</span><b>Drafted Framework &amp; Design Theory</b></figcaption></figure><p>Before a trench is dug, the residence already exists as a complete, coordinated set. Siting is resolved against setbacks, grade, and the view corridor; structure is integrated into clean architectural sheets that pass plan-check. Everything downstream answers to this document — which is why it is worth getting right before anyone breaks ground.</p></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/estate-phase-2-build.jpg" alt="Phase 02 — Build Begins, Temecula Valley residence by Temecula Interior Design" loading="lazy"><figcaption><span>Phase 02</span><b>Build Begins</b></figcaption></figure><p>Foundation and framing go in exactly as drawn. Because the plan set was produced in-house, our project management team reads the drawings in the field directly — there is no interpretation gap between the designer's intent and the framer's tape measure, and no waiting on an outside office to answer a question.</p></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/estate-phase-3-build.jpg" alt="Phase 03 — Structure Up, Temecula Valley residence by Temecula Interior Design" loading="lazy"><figcaption><span>Phase 03</span><b>Structure Up</b></figcaption></figure><p>Roof planes, envelope, and openings take shape. Field questions get resolved against the same set that cleared plan-check, so trades stay coordinated and the massing that was drawn is the massing that actually gets built. Proportion survives contact with the job site.</p></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/estate-phase-4-construction.jpg" alt="Phase 04 — Construction, Temecula Valley residence by Temecula Interior Design" loading="lazy"><figcaption><span>Phase 04</span><b>Construction</b></figcaption></figure><p>Systems, close-in, and interior rough-in run in parallel. This is where fulfillment starts earning its keep: long-lead finishes, fixtures, and furnishings are scheduled against the construction calendar so that nothing sits on the critical path waiting for a delivery.</p></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/estate-phase-5-near-completion.jpg" alt="Phase 05 — Near Completion, Temecula Valley residence by Temecula Interior Design" loading="lazy"><figcaption><span>Phase 05</span><b>Near Completion</b></figcaption></figure><p>Hardscape, pool, and landscape complete the site strategy set back in Phase 01. Interior finishes install alongside them, so the exterior program and the interior program land together rather than sequentially — the house and its setting are finished as one project, not two.</p></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/estate-phase-6-completion.jpg" alt="Phase 06 — Completion, Temecula Valley residence by Temecula Interior Design" loading="lazy"><figcaption><span>Phase 06</span><b>Completion</b></figcaption></figure><p>Punch, final styling, and handover. The residence reads as a single continuous idea because the plans, the project management, and the fulfillment all come from the same firm. One accountable team from first sketch to final walkthrough.</p></article>
-      </div>
-    </div>
-  </section>
-
-    <section class="pad-sm ph-sec">
-    <div class="wrap">
-      <div class="section-head center" style="margin:0 auto 44px;text-align:center">
-        <p class="eyebrow">Featured Properties</p>
-        <h2>Avocado Mesa Rd &amp; Avenida Perla Bonita.</h2>
-        <p style="max-width:62ch;margin:14px auto 0">Two residences in Murrieta.</p>
-      </div>
-      <div class="ph-grid">
-        <article class="pcell"><figure class="pcell-im"><img src="/avocado-mesa-framing.jpg" alt="Hillside residence, Avocado Mesa Rd, Murrieta, by Temecula Interior Design" loading="lazy"><figcaption><span>Avocado Mesa Rd &middot; Murrieta</span></figcaption></figure></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/avocado-mesa-phase-build.jpg" alt="Hillside residence, Avocado Mesa Rd, Murrieta, by Temecula Interior Design" loading="lazy"><figcaption><span>Avocado Mesa Rd &middot; Murrieta</span></figcaption></figure></article>
-<article class="pcell"><figure class="pcell-im"><img src="/avenida-perla-bonita-site.jpg" alt="Property in wine country, Avenida Perla Bonita, Murrieta" loading="lazy"><figcaption><span>Avenida Perla Bonita &middot; Murrieta</span></figcaption></figure></article>
-        <article class="pcell"><figure class="pcell-im"><img src="/avenida-perla-bonita-build.jpg" alt="Residence, Avenida Perla Bonita, Murrieta, by Temecula Interior Design" loading="lazy"><figcaption><span>Avenida Perla Bonita &middot; Murrieta</span></figcaption></figure></article>
+      <div class="a-ph-grid">
+        <article class="a-pcell"><figure class="a-pcell-im"><img src="/estate-phase-1-framework.jpg" alt="Phase 01 — Drafted Framework and Design Theory, Temecula Valley residence by Temecula Architectural Design" loading="lazy"><figcaption><span>Phase 01</span><b>Drafted Framework &amp; Design Theory</b></figcaption></figure><p>Before a trench is dug, the residence already exists as a complete, coordinated set. Siting is resolved against setbacks, grade, and the view corridor; structure is integrated into clean architectural sheets that pass plan-check. Everything downstream answers to this document — which is why it is worth getting right before anyone breaks ground.</p></article>
+        <article class="a-pcell"><figure class="a-pcell-im"><img src="/estate-phase-2-build.jpg" alt="Phase 02 — Build Begins, Temecula Valley residence by Temecula Architectural Design" loading="lazy"><figcaption><span>Phase 02</span><b>Build Begins</b></figcaption></figure><p>Foundation and framing go in exactly as drawn. Because the plan set was produced in-house, our project management team reads the drawings in the field directly — there is no interpretation gap between the designer's intent and the framer's tape measure, and no waiting on an outside office to answer a question.</p></article>
+        <article class="a-pcell"><figure class="a-pcell-im"><img src="/estate-phase-3-build.jpg" alt="Phase 03 — Structure Up, Temecula Valley residence by Temecula Architectural Design" loading="lazy"><figcaption><span>Phase 03</span><b>Structure Up</b></figcaption></figure><p>Roof planes, envelope, and openings take shape. Field questions get resolved against the same set that cleared plan-check, so trades stay coordinated and the massing that was drawn is the massing that actually gets built. Proportion survives contact with the job site.</p></article>
+        <article class="a-pcell"><figure class="a-pcell-im"><img src="/estate-phase-4-construction.jpg" alt="Phase 04 — Construction, Temecula Valley residence by Temecula Architectural Design" loading="lazy"><figcaption><span>Phase 04</span><b>Construction</b></figcaption></figure><p>Systems, close-in, and interior rough-in run in parallel. This is where fulfillment starts earning its keep: long-lead finishes, fixtures, and furnishings are scheduled against the construction calendar so that nothing sits on the critical path waiting for a delivery.</p></article>
+        <article class="a-pcell"><figure class="a-pcell-im"><img src="/estate-phase-5-near-completion.jpg" alt="Phase 05 — Near Completion, Temecula Valley residence by Temecula Architectural Design" loading="lazy"><figcaption><span>Phase 05</span><b>Near Completion</b></figcaption></figure><p>Hardscape, pool, and landscape complete the site strategy set back in Phase 01. Interior finishes install alongside them, so the exterior program and the interior program land together rather than sequentially — the house and its setting are finished as one project, not two.</p></article>
+        <article class="a-pcell"><figure class="a-pcell-im"><img src="/estate-phase-6-completion.jpg" alt="Phase 06 — Completion, Temecula Valley residence by Temecula Architectural Design" loading="lazy"><figcaption><span>Phase 06</span><b>Completion</b></figcaption></figure><p>Punch, final styling, and handover. The residence reads as a single continuous idea because the plans, the project management, and the fulfillment all come from the same firm. One accountable team from first sketch to final walkthrough.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="pad-sm adu-sec">
+  <section class="section-sm a-ph-sec">
     <div class="wrap">
-      <div class="section-head center" style="margin:0 auto 38px;text-align:center">
-        <p class="eyebrow">Now Building</p>
-        <h2 style="margin:14px 0 0">Temecula Valley ADUs.</h2>
-        <p style="max-width:58ch;margin:16px auto 0">A modern accessory dwelling, engineered with the latest building technology and style &mdash; for generational income and flexible living space. Let&rsquo;s build yours.</p>
-        <a class="btn btn-gold" href="/about" style="margin-top:26px;display:inline-block">Start Your ADU</a>
+      <div class="a-section-head">
+        <p class="a-eyebrow" style="justify-content:center">Featured Properties</p>
+        <h2 class="a-h2">Avocado Mesa Rd &amp; <em style="font-style:italic">Avenida Perla Bonita.</em></h2>
+        <p class="a-sub">Two residences in Murrieta.</p>
       </div>
-      <div class="adu-grid">
-        <figure><img src="/adu-1.jpg" alt="Modern Temecula Valley ADU exterior by Temecula Interior Design" loading="lazy"></figure>
+      <div class="a-featured-grid">
+        <figure><img src="/avocado-mesa-framing.jpg" alt="Hillside residence, Avocado Mesa Rd, Murrieta, by Temecula Architectural Design" loading="lazy"><figcaption>Avocado Mesa Rd &middot; Murrieta</figcaption></figure>
+        <figure><img src="/avocado-mesa-phase-build.jpg" alt="Hillside residence, Avocado Mesa Rd, Murrieta, by Temecula Architectural Design" loading="lazy"><figcaption>Avocado Mesa Rd &middot; Murrieta</figcaption></figure>
+        <figure><img src="/avenida-perla-bonita-site.jpg" alt="Property in wine country, Avenida Perla Bonita, Murrieta" loading="lazy"><figcaption>Avenida Perla Bonita &middot; Murrieta</figcaption></figure>
+        <figure><img src="/avenida-perla-bonita-build.jpg" alt="Residence, Avenida Perla Bonita, Murrieta, by Temecula Architectural Design" loading="lazy"><figcaption>Avenida Perla Bonita &middot; Murrieta</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="a-adu-sec">
+    <div class="wrap">
+      <div class="a-section-head">
+        <p class="a-eyebrow" style="justify-content:center">Now Building</p>
+        <h2 class="a-h2">Temecula Valley <em style="font-style:italic">ADUs.</em></h2>
+        <p class="a-sub">A modern accessory dwelling, engineered with the latest building technology and style — for generational income and flexible living space. Let's build yours.</p>
+        <a class="btn btn-silver" href="/architecture#inquire" style="margin-top:26px;display:inline-flex">Start Your ADU</a>
+      </div>
+      <div class="a-adu-grid">
+        <figure><img src="/adu-1.jpg" alt="Modern Temecula Valley ADU exterior by Temecula Architectural Design" loading="lazy"></figure>
         <figure><img src="/adu-2.jpg" alt="Modern Temecula Valley ADU living and dining interior" loading="lazy"></figure>
         <figure><img src="/adu-3.jpg" alt="Modern Temecula Valley ADU set in the vineyard" loading="lazy"></figure>
         <figure><img src="/adu-4.jpg" alt="Modern Temecula Valley ADU interior with vineyard view" loading="lazy"></figure>
       </div>
     </div>
   </section>
-<section class="pad-sm cta-sec">
-    <div class="wrap" style="text-align:center">
-      <p class="eyebrow">Start a Project</p>
-      <h2 style="margin:14px 0 18px">Have a site in mind?</h2>
-      <p style="max-width:56ch;margin:0 auto 28px">We take on a limited number of full design-and-build residences each year. Tell us about the property and we will walk you through what the first phase looks like.</p>
-      <a class="btn btn-gold" href="/about">Start a Project</a>
+
+  <section class="a-cta-sec">
+    <div class="wrap">
+      <p class="a-eyebrow" style="justify-content:center">Start a Project</p>
+      <h2 class="a-h2">Have a <em>site in mind?</em></h2>
+      <p>We take on a limited number of full design-and-build residences each year. Tell us about the property and we will walk you through what the first phase looks like.</p>
+      <a class="btn btn-silver" href="/architecture#inquire">Start a Project</a>
     </div>
   </section>
 </main>
 
-<style>
-.phero .how{
-  font-family:var(--sans);
-  font-size:12px;
-  line-height:1;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  font-weight:500;
-  color:var(--gold-light);
-  max-width:none;
-  margin:26px 0 6px;
-  display:inline-block;
-}
-.phero .how:after{
-  content:"";
-  display:block;
-  width:34px;height:1px;
-  margin-top:9px;
-  background:linear-gradient(90deg,var(--gold) 0%,rgba(201,164,88,0) 100%);
-}
-@media(max-width:600px){ .phero .how{font-size:11px;letter-spacing:.2em;margin-top:20px} }
-.intro-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.intro-im img{width:100%;height:340px;object-fit:cover;display:block}
-.lede{font-family:var(--serif);font-size:22px;line-height:1.55;color:var(--ink)}
-.ph-sec{background:var(--cream)}
-.ph-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 26px}
-.pcell{margin:0}
-.pcell-im{margin:0;position:relative;overflow:hidden;background:var(--charcoal)}
-.pcell-im img{width:100%;height:210px;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
-.pcell:hover .pcell-im img{transform:scale(1.06)}
-.pcell-im figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(180deg,rgba(33,31,31,0),rgba(33,31,31,.86));color:#fff}
-.pcell-im figcaption span{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light);display:block}
-.pcell-im figcaption b{font-family:var(--serif);font-size:18px;font-weight:500;display:block;margin-top:3px;line-height:1.15}
-.pcell p{color:var(--muted);line-height:1.7;font-size:14.5px;margin-top:14px;max-width:none}
-.adu-sec{background:var(--paper)}
-.adu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:6px}
-.adu-grid figure{margin:0;overflow:hidden;background:var(--charcoal)}
-.adu-grid img{width:100%;height:240px;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.3,1)}
-.adu-grid figure:hover img{transform:scale(1.05)}
-.cta-sec{background:var(--charcoal)}
-.cta-sec .eyebrow{color:var(--gold-light)}
-.cta-sec h2{color:#fff;font-family:var(--serif);font-size:38px;font-weight:500}
-.cta-sec p{color:rgba(255,255,255,.8)}
-@media(max-width:900px){
-  .intro-wrap{grid-template-columns:1fr;gap:28px}
-  .ph-grid{grid-template-columns:1fr 1fr;gap:26px 20px}
-  .adu-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){.ph-grid{grid-template-columns:1fr}.adu-grid{grid-template-columns:1fr}}
-</style>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="/"><img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="34" height="43"><span class="wm"><b>Temecula</b><span>Interior Design</span></span></a>
-        <p class="fdesc">Interior design, architectural design, and remodel — one company, from first sketch to finished home.</p>
-      </div>
-      <div><h4>Explore</h4><ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/media">Media</a></li>
-      </ul></div>
-      <div><h4>Services</h4><ul>
-        <li><a href="/services">Interior Design</a></li>
-        <li><a href="/architecture">Architectural Design</a></li>
-        <li><a href="https://www.temeculadesigntech.com/" target="_blank" rel="noopener">Remodel &amp; Build</a></li>
-        <li><a href="https://www.temeculainteriordecor.com" target="_blank" rel="noopener">Furnishings Store</a></li>
-      </ul></div>
-      <div><h4>Office</h4><ul>
-        <li>41593 Winchester Rd, Ste 200</li>
-        <li>Temecula, CA 92590</li>
-        <li><a href="mailto:admin@temeculainteriordesign.com">admin@temeculainteriordesign.com</a></li>
-        <li><a href="tel:+17148230045">714.823.0045</a></li>
-        <li><a href="/about">Contact</a></li>
-      </ul></div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Temecula Interior Design. All rights reserved.</span>
-      <span>Interior Design · Architectural Design · Remodel</span>
-    </div>
+<footer class="a-foot">
+  <div class="wrap a-foot-inner">
+    <span>&copy; 2026 Temecula Interior Design &middot; Temecula Architectural Design</span>
+    <span><a href="/architecture">temeculainteriordesign.com/architecture</a></span>
   </div>
 </footer>
-<script src="/script.js?v=2"></script>
+
+<script>
+window.addEventListener('scroll',function(){
+  document.getElementById('aNav').classList.toggle('scrolled', window.scrollY > 40);
+});
+</script>
 </body>
 </html>
