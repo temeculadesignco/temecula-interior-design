@@ -1,0 +1,10 @@
+{
+  "name": "temecula-interior-design",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site for temeculainteriordesign.com with a small set of Vercel serverless API routes.",
+  "dependencies": {
+    "@vercel/blob": "^0.27.0",
+    "busboy": "^1.6.0"
+  }
+}
