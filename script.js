@@ -19,6 +19,8 @@ function filt(btn,cat){
   btn.classList.add('active');
   document.querySelectorAll('#masonry .m').forEach(function(m){
     var show = (cat==='all') ? (m.dataset.cat==='built'||m.dataset.cat==='render') : (m.dataset.cat===cat);
-    m.style.display = show ? '' : 'none';
+    // explicit 'block' (not '') — a default-hide CSS rule keeps the Before &
+    // After tiles out of the initial view, and only an inline style beats it
+    m.style.display = show ? 'block' : 'none';
   });
 }
