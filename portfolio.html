@@ -20,6 +20,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v=5">
+<style>
+/* quiet, de-emphasized secondary tab — deliberately smaller than .filter buttons */
+.filter-quiet{text-align:center;margin:-26px 0 46px}
+.filter-quiet button{background:none;border:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);cursor:pointer;font-family:var(--sans);text-decoration:underline;text-underline-offset:3px;opacity:.7;transition:.2s;padding:4px}
+.filter-quiet button:hover{opacity:1;color:var(--charcoal)}
+.ba-cap{font-family:'Inter',sans-serif}
+.ba-cap span{display:block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-light)}
+.ba-cap b{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500}
+.ba-cap i{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:4px}
+#ma-panel{display:none}
+#ma-panel .ma-intro{max-width:640px;margin:0 auto 54px;text-align:center}
+#ma-panel .ma-intro p{margin-top:16px}
+#ma-panel .ma-back{display:inline-block;margin-top:22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer;background:none;border:none;font-family:var(--sans)}
+#ma-panel .ma-back:hover{color:var(--charcoal)}
+#ma-panel .masonry{opacity:.92}
+#ma-panel .masonry .m img{filter:saturate(.9)}
+.ma-pending{max-width:520px;margin:0 auto;text-align:center;font-size:13px;color:var(--muted);font-style:italic}
+/* Before & After starts hidden — "All" (default active) shows only built/render */
+#masonry .m[data-cat="beforeafter"]{display:none}
+</style>
 </head>
 <body class="inner">
 <header class="nav" id="nav">
@@ -31,7 +51,7 @@
     <nav class="links" id="navlinks">
       <a href="/">Home</a>
       <a href="/services">Services</a>
-      <a href="/architecture">Architecture</a>
+      <a href="/services#architecture">Architecture</a>
       <a href="/portfolio" class="active">Portfolio</a>
       <a href="/about">About &amp; Contact</a>
       <a href="/media">Media</a>
@@ -51,21 +71,35 @@
   </section>
   <section class="pad-sm">
     <div class="wrap">
+      <div class="filter" id="portfolio-filter">
+        <button class="active" onclick="filt(this,'all')">All</button>
+        <button onclick="filt(this,'beforeafter')">Before &amp; After</button>
+      </div>
+      <div class="filter-quiet"><button onclick="showMichaelAlex()">Michael Alex</button></div>
+
       <div class="masonry" id="masonry">
-        <figure class="m" data-cat="built" style="cursor:default">
+        <!-- Before & After tile: Big Bear Cabin Great Room -->
+        <figure class="m" data-cat="beforeafter" style="cursor:default">
           <div style="position:relative"><img src="/big-bear-great-room-before.jpg" alt="Big Bear cabin great room before renovation" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
           <div style="height:2px;background:var(--gold)"></div>
           <div style="position:relative"><img src="/big-bear-great-room-after.jpg" alt="Big Bear cabin great room after interior design and furnishing by Michael Ornelas" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-          <figcaption class="cap"><span>Built &middot; Big Bear</span><b>Cabin Great Room</b></figcaption>
+          <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Great Room</b></figcaption>
         </figure>
-        <figure class="m" data-cat="built" style="cursor:default">
+        <!-- Before & After tile: Big Bear Cabin Kitchen -->
+        <figure class="m" data-cat="beforeafter" style="cursor:default">
           <div style="position:relative"><img src="/big-bear-kitchen-before.jpg" alt="Big Bear cabin kitchen before remodel" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
           <div style="height:2px;background:var(--gold)"></div>
           <div style="position:relative"><img src="/big-bear-kitchen-after.jpg" alt="Big Bear cabin kitchen after remodel with marble waterfall island and walnut cabinetry" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-          <figcaption class="cap"><span>Built &middot; Big Bear</span><b>Cabin Kitchen</b></figcaption>
+          <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Kitchen</b></figcaption>
         </figure>
-        <figure class="m" data-cat="built"><img src="/kitchen-remodel-after.jpg" alt="Kitchen after remodel with marble backsplash, walnut cabinetry and dining area" loading="lazy"><figcaption class="cap"><span>Built &middot; Before &amp; After</span><b>Kitchen Remodel &mdash; After</b></figcaption></figure>
-        <figure class="m" data-cat="built"><img src="/kitchen-remodel-before.jpg" alt="Kitchen before remodel" loading="lazy"><figcaption class="cap"><span>Built &middot; Before &amp; After</span><b>Kitchen Remodel &mdash; Before</b></figcaption></figure>
+        <!-- Before & After tile: Kitchen Remodel -->
+        <figure class="m" data-cat="beforeafter" style="cursor:default">
+          <div style="position:relative"><img src="/kitchen-remodel-before.jpg" alt="Kitchen before remodel" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+          <div style="height:2px;background:var(--gold)"></div>
+          <div style="position:relative"><img src="/kitchen-remodel-after.jpg" alt="Kitchen after remodel with marble backsplash, walnut cabinetry and dining area" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+          <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula Valley, CA</span><b style="color:var(--ink)">Kitchen Remodel</b></figcaption>
+        </figure>
+
         <figure class="m" data-cat="built" style="cursor:default">
           <div style="position:relative;max-height:130px;overflow:hidden"><img src="/p-shaw-render.jpg" alt="Kitchen design concept" loading="lazy" style="height:130px;object-fit:cover"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Concept</span></div>
           <div style="position:relative"><img src="/p-shaw-kitchen.jpg" alt="Kitchen remodel in Temecula" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Remodel</span></div>
@@ -81,6 +115,36 @@
         <figure class="m" data-cat="render"><img src="/p-guest-bath.jpg" alt="Guest bathroom rendering" loading="lazy"><figcaption class="cap"><span></span><b>Guest Bath</b></figcaption></figure>
         <figure class="m" data-cat="render"><img src="/p-living-featurewall.jpg" alt="Modern living room rendering with black panelled feature wall and boucle sofa" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Feature Wall Living Room</b></figcaption></figure>
         <figure class="m" data-cat="render"><img src="/p-trabuco-greatroom.jpg" alt="Trabuco Canyon great room rendering with vaulted ceiling and dining area" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Trabuco Canyon Great Room</b></figcaption></figure>
+        <!-- Temecula, CA residence overlooking the 215 -->
+        <figure class="m" data-cat="built"><img src="/p-temecula-215-bath-marble.jpg" alt="Primary bathroom with marble slab shower and floating wood vanity, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+        <figure class="m" data-cat="built"><img src="/p-temecula-215-bath-dark.jpg" alt="Dark wood primary bathroom with brass fixtures at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+        <figure class="m" data-cat="built"><img src="/p-temecula-215-bedroom.jpg" alt="Primary bedroom with city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+        <figure class="m" data-cat="built"><img src="/p-temecula-215-kitchen.jpg" alt="Dark wood kitchen with island seating and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+        <figure class="m" data-cat="built"><img src="/p-temecula-215-living.jpg" alt="Living room with linear fireplace and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+      </div>
+
+      <!-- Michael Alex tab: intentionally minimal, quiet, off to the side of the main portfolio -->
+      <div id="ma-panel">
+        <div class="ma-intro">
+          <p class="eyebrow">Michael Alex</p>
+          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--charcoal)">Founder, Temecula Interior Design.</p>
+          <p>Many different interior designers bring their own projects to life under the Temecula Interior Design name. This is a small, standalone record of Michael's own work.</p>
+        </div>
+        <div class="masonry">
+          <figure class="m" style="cursor:default">
+            <div style="position:relative"><img src="/ma-bigbear-before.jpg" alt="Big Bear cabin kitchen before remodel, lake view" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+            <div style="height:2px;background:var(--gold)"></div>
+            <div style="position:relative"><img src="/ma-bigbear-after.jpg" alt="Big Bear cabin kitchen after remodel, lake view, designed by Michael Alex" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+            <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Kitchen</b></figcaption>
+          </figure>
+          <figure class="m" style="cursor:default">
+            <div style="position:relative"><img src="/ma-murrieta-kitchen-before.jpg" alt="Murrieta kitchen before remodel with view to backyard" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+            <div style="height:2px;background:var(--gold)"></div>
+            <div style="position:relative"><img src="/ma-murrieta-kitchen-after.jpg" alt="Murrieta kitchen after remodel with marble island and view to backyard, designed by Michael Alex" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+            <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Murrieta, CA</span><b style="color:var(--ink)">Kitchen &amp; Backyard</b></figcaption>
+          </figure>
+        </div>
+        <div style="text-align:center"><button class="ma-back" onclick="showMichaelAlex(true)">&larr; Back to Portfolio</button></div>
       </div>
     </div>
   </section>
@@ -103,7 +167,7 @@
       </ul></div>
       <div><h4>Services</h4><ul>
         <li><a href="/services">Interior Design</a></li>
-        <li><a href="/architecture">Architectural Design</a></li>
+        <li><a href="/services">Architectural Design</a></li>
         <li><a href="https://www.temeculadesigntech.com/" target="_blank" rel="noopener">Remodel &amp; Build</a></li>
         <li><a href="https://www.temeculainteriordecor.com" target="_blank" rel="noopener">Furnishings Store</a></li>
       </ul></div>
@@ -122,5 +186,24 @@
   </div>
 </footer>
 <script src="/script.js?v=2"></script>
+<script>
+function showMichaelAlex(back){
+  var mp=document.getElementById('ma-panel');
+  var main=document.getElementById('masonry');
+  var filterRow=document.getElementById('portfolio-filter');
+  var quiet=document.querySelector('.filter-quiet');
+  if(back){
+    mp.style.display='none';
+    main.style.display='';
+    filterRow.style.display='';
+    quiet.style.display='';
+  } else {
+    mp.style.display='block';
+    main.style.display='none';
+    filterRow.style.display='none';
+    quiet.style.display='none';
+  }
+}
+</script>
 </body>
 </html>

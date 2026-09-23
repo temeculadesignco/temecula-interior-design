@@ -12,11 +12,13 @@ function toggleMenu(){document.getElementById('navlinks').classList.toggle('open
   onScroll();
 })();
 
-// Portfolio filter
+// Portfolio filter. "all" intentionally excludes the Before & After tab —
+// those pairs only show up once that tab is selected directly.
 function filt(btn,cat){
   document.querySelectorAll('.filter button').forEach(function(b){b.classList.remove('active');});
   btn.classList.add('active');
   document.querySelectorAll('#masonry .m').forEach(function(m){
-    m.style.display=(cat==='all'||m.dataset.cat===cat)?'':'none';
+    var show = (cat==='all') ? (m.dataset.cat==='built'||m.dataset.cat==='render') : (m.dataset.cat===cat);
+    m.style.display = show ? '' : 'none';
   });
 }
