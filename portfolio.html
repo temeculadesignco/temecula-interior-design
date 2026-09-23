@@ -43,166 +43,178 @@
 </head>
 <body class="inner">
 <header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="/">
-      <img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="30" height="38">
-      <span class="wm"><b>Temecula</b><span>Interior Design</span></span>
-    </a>
-    <nav class="links" id="navlinks">
-      <a href="/">Home</a>
-      <a href="/services">Services</a>
-      <a href="/services#architecture">Architecture</a>
-      <a href="/portfolio" class="active">Portfolio</a>
-      <a href="/about">About &amp; Contact</a>
-      <a href="/media">Media</a>
-      <a class="nav-cta" href="/about">Start a Project</a>
-    </nav>
-    <button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+<div class="wrap nav-inner">
+<a class="brand" href="/">
+<img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="30" height="38">
+<span class="wm"><b>Temecula</b><span>Interior Design</span></span>
+</a>
+<nav class="links" id="navlinks">
+<a href="/">Home</a>
+<a href="/services">Services</a>
+<a href="/services#architecture">Architecture</a>
+<a href="/portfolio" class="active">Portfolio</a>
+<a href="/about">About &amp; Contact</a>
+<a href="/media">Media</a>
+<a class="nav-cta" href="/about">Start a Project</a>
+</nav>
+<button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
 </header>
 <main>
-  <section class="phero">
-    <div class="ghost">W</div>
-    <div class="wrap">
-      <p class="eyebrow">Portfolio</p>
-      <h1>Selected work.</h1>
-      <p>Built projects, before &amp; afters, and design work across the Temecula Valley and greater Southern California.</p>
-    </div>
-  </section>
-  <section class="pad-sm">
-    <div class="wrap">
-      <div class="filter" id="portfolio-filter">
-        <button class="active" onclick="filt(this,'all')">All</button>
-        <button onclick="filt(this,'beforeafter')">Before &amp; After</button>
-      </div>
-      <div class="filter-quiet"><button onclick="showMichaelAlex()">Michael Alex</button></div>
+<section class="phero">
+<div class="ghost">W</div>
+<div class="wrap">
+<p class="eyebrow">Portfolio</p>
+<h1>Selected work.</h1>
+<p>Built projects, before &amp; afters, and design work across the Temecula Valley and greater Southern California.</p>
+</div>
+</section>
+<section class="pad-sm">
+<div class="wrap">
+<div class="filter" id="portfolio-filter">
+<button class="active" onclick="filt(this,'all')">All</button>
+<button onclick="filt(this,'beforeafter')">Before &amp; After</button>
+</div>
+<div class="filter-quiet"><button onclick="showMichaelAlex()">Michael Alex</button></div>
 
-      <div class="masonry" id="masonry">
-        <!-- Before & After tile: Big Bear Cabin Great Room -->
-        <figure class="m" data-cat="beforeafter" style="cursor:default">
-          <div style="position:relative"><img src="/big-bear-great-room-before.jpg" alt="Big Bear cabin great room before renovation" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
-          <div style="height:2px;background:var(--gold)"></div>
-          <div style="position:relative"><img src="/big-bear-great-room-after.jpg" alt="Big Bear cabin great room after interior design and furnishing by Michael Ornelas" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-          <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Great Room</b></figcaption>
-        </figure>
-        <!-- Before & After tile: Big Bear Cabin Kitchen -->
-        <figure class="m" data-cat="beforeafter" style="cursor:default">
-          <div style="position:relative"><img src="/big-bear-kitchen-before.jpg" alt="Big Bear cabin kitchen before remodel" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
-          <div style="height:2px;background:var(--gold)"></div>
-          <div style="position:relative"><img src="/big-bear-kitchen-after.jpg" alt="Big Bear cabin kitchen after remodel with marble waterfall island and walnut cabinetry" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-          <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Kitchen</b></figcaption>
-        </figure>
-        <!-- Before & After tile: Kitchen Remodel -->
-        <figure class="m" data-cat="beforeafter" style="cursor:default">
-          <div style="position:relative"><img src="/kitchen-remodel-before.jpg" alt="Kitchen before remodel" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
-          <div style="height:2px;background:var(--gold)"></div>
-          <div style="position:relative"><img src="/kitchen-remodel-after.jpg" alt="Kitchen after remodel with marble backsplash, walnut cabinetry and dining area" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-          <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula Valley, CA</span><b style="color:var(--ink)">Kitchen Remodel</b></figcaption>
-        </figure>
+<div class="masonry" id="masonry">
+<!-- Before & After tile: Big Bear Cabin Great Room -->
+<figure class="m" data-cat="beforeafter" style="cursor:default">
+<div style="position:relative"><img src="/big-bear-great-room-before.jpg" alt="Big Bear cabin great room before renovation" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+<div style="height:2px;background:var(--gold)"></div>
+<div style="position:relative"><img src="/big-bear-great-room-after.jpg" alt="Big Bear cabin great room after interior design and furnishing by Michael Ornelas" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+<figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Great Room</b></figcaption>
+</figure>
+<!-- Before & After tile: Big Bear Cabin Kitchen -->
+<figure class="m" data-cat="beforeafter" style="cursor:default">
+<div style="position:relative"><img src="/big-bear-kitchen-before.jpg" alt="Big Bear cabin kitchen before remodel" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+<div style="height:2px;background:var(--gold)"></div>
+<div style="position:relative"><img src="/big-bear-kitchen-after.jpg" alt="Big Bear cabin kitchen after remodel with marble waterfall island and walnut cabinetry" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+<figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Kitchen</b></figcaption>
+</figure>
+<!-- Before & After tile: Kitchen Remodel -->
+<figure class="m" data-cat="beforeafter" style="cursor:default">
+<div style="position:relative"><img src="/kitchen-remodel-before.jpg" alt="Kitchen before remodel" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+<div style="height:2px;background:var(--gold)"></div>
+<div style="position:relative"><img src="/kitchen-remodel-after.jpg" alt="Kitchen after remodel with marble backsplash, walnut cabinetry and dining area" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+<figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula Valley, CA</span><b style="color:var(--ink)">Kitchen Remodel</b></figcaption>
+</figure>
+<!-- Before & After tile: Murrieta Luxury Kitchen -->
+<figure class="m" data-cat="beforeafter" style="cursor:default">
+<div style="position:relative"><img src="/p-shaw-render.jpg" alt="Murrieta luxury kitchen design concept rendering" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+<div style="height:2px;background:var(--gold)"></div>
+<div style="position:relative"><img src="/murrieta-luxury-kitchen-after.jpg" alt="Murrieta luxury kitchen after remodel with marble waterfall island and walnut cabinetry" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+<figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Murrieta, CA</span><b style="color:var(--ink)">Luxury Kitchen</b></figcaption>
+</figure>
 
-        <figure class="m" data-cat="built" style="cursor:default">
-          <div style="position:relative;max-height:130px;overflow:hidden"><img src="/p-shaw-render.jpg" alt="Kitchen design concept" loading="lazy" style="height:130px;object-fit:cover"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Concept</span></div>
-          <div style="position:relative"><img src="/p-shaw-kitchen.jpg" alt="Kitchen remodel in Temecula" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Remodel</span></div>
-          <figcaption class="cap"><span>Built · Temecula</span><b>Kitchen Remodel</b></figcaption>
-        </figure>
-        <figure class="m" data-cat="built"><img src="/bedroom-designed-michael-alex.jpg" alt="Primary bedroom interior design with custom gallery wall by Temecula Interior Design" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula</span><b>Primary Bedroom</b><i style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9px;letter-spacing:.03em;color:rgba(255,255,255,.75);margin-top:3px">designed by Michael Alex</i></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-temecula-kitchen.jpg" alt="Temecula kitchen rendering with marble waterfall island and steel windows" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Temecula Valley Kitchen</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-luxe-kitchen.jpg" alt="Temecula modern minimal kitchen design rendering with marble island and vineyard view" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Modern Temecula Kitchen</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-elegant-bath.jpg" alt="Elegant spa bathroom rendering with soaking tub" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Spa Bath</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-murrieta-bed.jpg" alt="Murrieta primary bedroom suite rendering" loading="lazy"><figcaption class="cap"><span>Murrieta</span><b>Primary Suite</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-dark-bath.jpg" alt="Dark luxe primary bathroom rendering with walnut and marble" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Dark Luxe Bath</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-vineyard-bath.jpg" alt="Vineyard view bathroom rendering with freestanding tub" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Vineyard Bath</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-guest-bath.jpg" alt="Guest bathroom rendering" loading="lazy"><figcaption class="cap"><span></span><b>Guest Bath</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-living-featurewall.jpg" alt="Modern living room rendering with black panelled feature wall and boucle sofa" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Feature Wall Living Room</b></figcaption></figure>
-        <figure class="m" data-cat="render"><img src="/p-trabuco-greatroom.jpg" alt="Trabuco Canyon great room rendering with vaulted ceiling and dining area" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Trabuco Canyon Great Room</b></figcaption></figure>
-        <!-- Temecula, CA residence overlooking the 215 -->
-        <figure class="m" data-cat="built"><img src="/p-temecula-215-bath-marble.jpg" alt="Primary bathroom with marble slab shower and floating wood vanity, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
-        <figure class="m" data-cat="built"><img src="/p-temecula-215-bath-dark.jpg" alt="Dark wood primary bathroom with brass fixtures at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
-        <figure class="m" data-cat="built"><img src="/p-temecula-215-bedroom.jpg" alt="Primary bedroom with city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
-        <figure class="m" data-cat="built"><img src="/p-temecula-215-kitchen.jpg" alt="Dark wood kitchen with island seating and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
-        <figure class="m" data-cat="built"><img src="/p-temecula-215-living.jpg" alt="Living room with linear fireplace and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
-      </div>
+<figure class="m" data-cat="built" style="cursor:default">
+<div style="position:relative;max-height:130px;overflow:hidden"><img src="/p-shaw-render.jpg" alt="Kitchen design concept" loading="lazy" style="height:130px;object-fit:cover"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Concept</span></div>
+<div style="position:relative"><img src="/murrieta-luxury-kitchen-after.jpg" alt="Murrieta luxury kitchen remodel with marble waterfall island and walnut cabinetry" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Remodel</span></div>
+<figcaption class="cap"><span>Built · Murrieta</span><b>Luxury Kitchen</b></figcaption>
+</figure>
+<figure class="m" data-cat="built"><img src="/bedroom-designed-michael-alex.jpg" alt="Primary bedroom interior design with custom gallery wall by Temecula Interior Design" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula</span><b>Primary Bedroom</b><i style="display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9px;letter-spacing:.03em;color:rgba(255,255,255,.75);margin-top:3px">designed by Michael Alex</i></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-temecula-kitchen.jpg" alt="Temecula kitchen rendering with marble waterfall island and steel windows" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Temecula Valley Kitchen</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-luxe-kitchen.jpg" alt="Temecula modern minimal kitchen design rendering with marble island and vineyard view" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Modern Temecula Kitchen</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-elegant-bath.jpg" alt="Elegant spa bathroom rendering with soaking tub" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Spa Bath</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-murrieta-bed.jpg" alt="Murrieta primary bedroom suite rendering" loading="lazy"><figcaption class="cap"><span>Murrieta</span><b>Primary Suite</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-dark-bath.jpg" alt="Dark luxe primary bathroom rendering with walnut and marble" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Dark Luxe Bath</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-vineyard-bath.jpg" alt="Vineyard view bathroom rendering with freestanding tub" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Vineyard Bath</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-guest-bath.jpg" alt="Guest bathroom rendering" loading="lazy"><figcaption class="cap"><span></span><b>Guest Bath</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-living-featurewall.jpg" alt="Modern living room rendering with black panelled feature wall and boucle sofa" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Feature Wall Living Room</b></figcaption></figure>
+<figure class="m" data-cat="render"><img src="/p-trabuco-greatroom.jpg" alt="Trabuco Canyon great room rendering with vaulted ceiling and dining area" loading="lazy"><figcaption class="cap"><span>Michael Alex</span><b>Trabuco Canyon Great Room</b></figcaption></figure>
+<!-- Temecula, CA residence overlooking the 215 -->
+<figure class="m" data-cat="built"><img src="/p-temecula-215-bath-marble.jpg" alt="Primary bathroom with marble slab shower and floating wood vanity, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+<figure class="m" data-cat="built"><img src="/p-temecula-215-bath-dark.jpg" alt="Dark wood primary bathroom with brass fixtures at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+<figure class="m" data-cat="built"><img src="/p-temecula-215-bedroom.jpg" alt="Primary bedroom with city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+<figure class="m" data-cat="built"><img src="/p-temecula-215-kitchen.jpg" alt="Dark wood kitchen with island seating and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+<figure class="m" data-cat="built"><img src="/p-temecula-215-living.jpg" alt="Living room with linear fireplace and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap"><span>Built &middot; Temecula, CA</span><b>Residence Overlooking the 215</b></figcaption></figure>
+</div>
 
-      <!-- Michael Alex tab: intentionally minimal, quiet, off to the side of the main portfolio -->
-      <div id="ma-panel">
-        <div class="ma-intro">
-          <p class="eyebrow">Michael Alex</p>
-          <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--charcoal)">Founder, Temecula Interior Design.</p>
-          <p>Many different interior designers bring their own projects to life under the Temecula Interior Design name. This is a small, standalone record of Michael's own work.</p>
-        </div>
-        <div class="masonry">
-          <figure class="m" style="cursor:default">
-            <div style="position:relative"><img src="/ma-bigbear-before.jpg" alt="Big Bear cabin kitchen before remodel, lake view" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
-            <div style="height:2px;background:var(--gold)"></div>
-            <div style="position:relative"><img src="/ma-bigbear-after.jpg" alt="Big Bear cabin kitchen after remodel, lake view, designed by Michael Alex" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-            <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Kitchen</b></figcaption>
-          </figure>
-          <figure class="m" style="cursor:default">
-            <div style="position:relative"><img src="/ma-murrieta-kitchen-before.jpg" alt="Murrieta kitchen before remodel with view to backyard" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
-            <div style="height:2px;background:var(--gold)"></div>
-            <div style="position:relative"><img src="/ma-murrieta-kitchen-after.jpg" alt="Murrieta kitchen after remodel with marble island and view to backyard, designed by Michael Alex" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
-            <figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Murrieta, CA</span><b style="color:var(--ink)">Kitchen &amp; Backyard</b></figcaption>
-          </figure>
-        </div>
-        <div style="text-align:center"><button class="ma-back" onclick="showMichaelAlex(true)">&larr; Back to Portfolio</button></div>
-      </div>
-    </div>
-  </section>
-  <section class="cta-band pad-sm">
-    <div class="wrap"><p class="eyebrow">Begin</p><h2 style="margin:16px 0 26px">Your project could be next.</h2><a class="btn btn-dark" href="/about">Start a Project</a></div>
-  </section>
+<!-- Michael Alex tab: intentionally minimal, quiet, off to the side of the main portfolio -->
+<div id="ma-panel">
+<div class="ma-intro">
+<p class="eyebrow">Michael Alex</p>
+<p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--charcoal)">Founder, Temecula Interior Design.</p>
+<p>Many different interior designers bring their own projects to life under the Temecula Interior Design name. This is a small, standalone record of Michael's own work.</p>
+</div>
+<div class="masonry">
+<figure class="m" style="cursor:default">
+<div style="position:relative"><img src="/ma-bigbear-before.jpg" alt="Big Bear cabin kitchen before remodel, lake view" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+<div style="height:2px;background:var(--gold)"></div>
+<div style="position:relative"><img src="/ma-bigbear-after.jpg" alt="Big Bear cabin kitchen after remodel, lake view, designed by Michael Alex" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+<figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Big Bear, CA</span><b style="color:var(--ink)">Cabin Kitchen</b></figcaption>
+</figure>
+<figure class="m" style="cursor:default">
+<div style="position:relative"><img src="/ma-murrieta-kitchen-before.jpg" alt="Murrieta kitchen before remodel with view to backyard" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">Before</span></div>
+<div style="height:2px;background:var(--gold)"></div>
+<div style="position:relative"><img src="/ma-murrieta-kitchen-after.jpg" alt="Murrieta kitchen after remodel with marble island and view to backyard, designed by Michael Alex" loading="lazy"><span style="position:absolute;bottom:6px;left:8px;font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(33,31,31,.72);padding:3px 8px">After</span></div>
+<figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Murrieta, CA</span><b style="color:var(--ink)">Kitchen &amp; Backyard</b></figcaption>
+</figure>
+<figure class="m"><img src="/p-temecula-215-bath-marble.jpg" alt="Primary bathroom with marble slab shower and floating wood vanity, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula, CA</span><b style="color:var(--ink)">Marble Primary Bath</b></figcaption></figure>
+<figure class="m"><img src="/p-temecula-215-bath-dark.jpg" alt="Dark wood primary bathroom with brass fixtures at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula, CA</span><b style="color:var(--ink)">Dark Wood &amp; Brass Bath</b></figcaption></figure>
+<figure class="m"><img src="/p-temecula-215-bedroom.jpg" alt="Primary bedroom with city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula, CA</span><b style="color:var(--ink)">Primary Bedroom</b></figcaption></figure>
+<figure class="m"><img src="/p-temecula-215-kitchen.jpg" alt="Dark wood kitchen with island seating and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula, CA</span><b style="color:var(--ink)">Kitchen</b></figcaption></figure>
+<figure class="m"><img src="/p-temecula-215-living.jpg" alt="Living room with linear fireplace and city view at night, Temecula, CA residence overlooking the 215" loading="lazy"><figcaption class="cap ba-cap" style="opacity:1;position:static;background:none;padding:14px 2px 0;color:var(--ink)"><span style="color:var(--gold)">Temecula, CA</span><b style="color:var(--ink)">Living Room</b></figcaption></figure>
+</div>
+<div style="text-align:center"><button class="ma-back" onclick="showMichaelAlex(true)">&larr; Back to Portfolio</button></div>
+</div>
+</div>
+</section>
+<section class="cta-band pad-sm">
+<div class="wrap"><p class="eyebrow">Begin</p><h2 style="margin:16px 0 26px">Your project could be next.</h2><a class="btn btn-dark" href="/about">Start a Project</a></div>
+</section>
 </main>
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="/"><img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="34" height="43"><span class="wm"><b>Temecula</b><span>Interior Design</span></span></a>
-        <p class="fdesc">Interior design, architectural design, and remodel — one company, from first sketch to finished home.</p>
-      </div>
-      <div><h4>Explore</h4><ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/portfolio">Portfolio</a></li>
-        <li><a href="/media">Media</a></li>
-      </ul></div>
-      <div><h4>Services</h4><ul>
-        <li><a href="/services">Interior Design</a></li>
-        <li><a href="/services">Architectural Design</a></li>
-        <li><a href="https://www.temeculadesigntech.com/" target="_blank" rel="noopener">Remodel &amp; Build</a></li>
-        <li><a href="https://www.temeculainteriordecor.com" target="_blank" rel="noopener">Furnishings Store</a></li>
-      </ul></div>
-      <div><h4>Office</h4><ul>
-        <li>41593 Winchester Rd, Ste 200</li>
-        <li>Temecula, CA 92590</li>
-        <li><a href="mailto:admin@temeculainteriordesign.com">admin@temeculainteriordesign.com</a></li>
-        <li><a href="tel:+17148230045">714.823.0045</a></li>
-        <li><a href="/about">Contact</a></li>
-      </ul></div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Temecula Interior Design. All rights reserved.</span>
-      <span>Interior Design · Architectural Design · Remodel</span>
-    </div>
-  </div>
+<div class="wrap">
+<div class="foot-grid">
+<div>
+<a class="brand" href="/"><img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="34" height="43"><span class="wm"><b>Temecula</b><span>Interior Design</span></span></a>
+<p class="fdesc">Interior design, architectural design, and remodel — one company, from first sketch to finished home.</p>
+</div>
+<div><h4>Explore</h4><ul>
+<li><a href="/">Home</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/portfolio">Portfolio</a></li>
+<li><a href="/media">Media</a></li>
+</ul></div>
+<div><h4>Services</h4><ul>
+<li><a href="/services">Interior Design</a></li>
+<li><a href="/services">Architectural Design</a></li>
+<li><a href="https://www.temeculadesigntech.com/" target="_blank" rel="noopener">Remodel &amp; Build</a></li>
+<li><a href="https://www.temeculainteriordecor.com" target="_blank" rel="noopener">Furnishings Store</a></li>
+</ul></div>
+<div><h4>Office</h4><ul>
+<li>41593 Winchester Rd, Ste 200</li>
+<li>Temecula, CA 92590</li>
+<li><a href="mailto:admin@temeculainteriordesign.com">admin@temeculainteriordesign.com</a></li>
+<li><a href="tel:+17148230045">714.823.0045</a></li>
+<li><a href="/about">Contact</a></li>
+</ul></div>
+</div>
+<div class="foot-bottom">
+<span>© 2026 Temecula Interior Design. All rights reserved.</span>
+<span>Interior Design · Architectural Design · Remodel</span>
+</div>
+</div>
 </footer>
 <script src="/script.js?v=3"></script>
 <script>
 function showMichaelAlex(back){
-  var mp=document.getElementById('ma-panel');
-  var main=document.getElementById('masonry');
-  var filterRow=document.getElementById('portfolio-filter');
-  var quiet=document.querySelector('.filter-quiet');
-  if(back){
-    mp.style.display='none';
-    main.style.display='';
-    filterRow.style.display='';
-    quiet.style.display='';
-  } else {
-    mp.style.display='block';
-    main.style.display='none';
-    filterRow.style.display='none';
-    quiet.style.display='none';
-  }
+var mp=document.getElementById('ma-panel');
+var main=document.getElementById('masonry');
+var filterRow=document.getElementById('portfolio-filter');
+var quiet=document.querySelector('.filter-quiet');
+if(back){
+mp.style.display='none';
+main.style.display='';
+filterRow.style.display='';
+quiet.style.display='';
+} else {
+mp.style.display='block';
+main.style.display='none';
+filterRow.style.display='none';
+quiet.style.display='none';
+}
 }
 </script>
 </body>
