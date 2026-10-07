@@ -75,6 +75,9 @@ img{max-width:100%;display:block}
 /* hero */
 .a-hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
 .a-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:grayscale(28%) contrast(1.08) brightness(.62)}
+.a-hero-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:2px;background:#0a0a0b;filter:grayscale(28%) contrast(1.08) brightness(.62)}
+.a-hero-grid img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:640px){.a-hero-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,1fr)}}
 .a-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,11,.35) 0%,rgba(10,10,11,.15) 35%,rgba(10,10,11,.92) 100%)}
 .a-hero-content{position:relative;z-index:2;padding-bottom:96px;width:100%}
 .a-eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--silver-2);margin:0 0 18px;display:flex;align-items:center;gap:14px}
@@ -183,14 +186,13 @@ form.a-form{display:grid;gap:20px}
     <a class="a-brand" href="/"><b>Temecula</b> Interior Design<span>Temecula Architectural Design</span></a>
     <nav class="a-nav-links">
       <a href="/">Main Site</a>
-      <a href="/portfolio">Portfolio</a>
       <a class="a-nav-cta" href="#inquire">Start a Project</a>
     </nav>
   </div>
 </header>
 
 <section class="a-hero">
-  <img class="a-hero-img" src="/arch-hero.jpg" alt="Modern minimalist architectural build by Temecula Interior Design">
+  <div class="a-hero-grid" aria-hidden="false"><img src="/estate-phase-1-framework.jpg" alt="Temecula winery estate build, Phase 1: framework"><img src="/estate-phase-2-build.jpg" alt="Temecula winery estate build, Phase 2: build in progress"><img src="/estate-phase-3-build.jpg" alt="Temecula winery estate build, Phase 3: build in progress, lake view"><img src="/estate-phase-4-construction.jpg" alt="Temecula winery estate build, Phase 4: construction"><img src="/estate-phase-5-near-completion.jpg" alt="Temecula winery estate build, Phase 5: near completion"><img src="/estate-phase-6-completion.jpg" alt="Temecula winery estate build, Phase 6: completion day"></div>
   <div class="wrap a-hero-content">
     <p class="a-eyebrow">Architecture &amp; Structural Design</p>
     <h1>Permit-ready<br><em>architecture,</em><br>drafted in-house.</h1>
