@@ -395,3 +395,32 @@ footer .brand .mark-img{height:42px}
 .adp-paybtn.btn{background:var(--tid-metal-gold);background-size:220% 100%;color:var(--tid-noir);border:0;font-weight:600;box-shadow:inset 0 0 0 1px rgba(252,239,213,.55),0 12px 28px -12px rgba(140,74,50,.95);transition:background-position .6s,opacity .3s}
 .adp-paybtn.btn:hover{background-position:100% 0}
 .adp-pay::after{content:"";position:absolute;right:-8%;bottom:-2%;width:62%;height:70%;background:url(/brand/t-metal-silver.webp) right bottom/contain no-repeat;opacity:.1;pointer-events:none;z-index:-1}
+
+/* ---- Home: Automated Interior Design skinny strip (below hero) ---- */
+.adi-strip{position:relative;display:flex;align-items:center;justify-content:center;min-height:54px;margin:28px 0;padding:12px 24px;background:#FFFFFF;border-top:1px solid #000;border-bottom:1px solid #000;text-decoration:none;text-align:center}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){.adi-strip{border-top-width:.5px;border-bottom-width:.5px}}
+.adi-strip-txt{font-size:12px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:#444;
+  background:linear-gradient(100deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.95) 50%,rgba(255,255,255,0) 60%) 100% 0/250% 100% no-repeat,
+             linear-gradient(100deg,rgba(255,255,255,0) 42%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 58%) 100% 0/250% 100% no-repeat,
+             linear-gradient(180deg,#2A2A2A 0%,#555555 24%,#BDBDBD 40%,#444444 54%,#777777 72%,#1E1E1E 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 1px 0 rgba(255,255,255,.9)) drop-shadow(0 0 .4px rgba(0,0,0,.35));animation:adiStripSheen 4s ease-in-out infinite;transition:opacity .2s}
+/* 4s loop: bright sweep 0-1.5s, softer trailing sweep 1.2-2.8s, short pause */
+@keyframes adiStripSheen{
+  0%{background-position:100% 0,100% 0,0 0}
+  30%{background-position:20% 0,100% 0,0 0}
+  37.5%{background-position:0% 0,85% 0,0 0}
+  70%{background-position:0% 0,0% 0,0 0}
+  100%{background-position:0% 0,0% 0,0 0}}
+@media (prefers-reduced-motion:reduce){.adi-strip-txt{animation:none}}
+.adi-strip-amt{font-family:var(--serif);font-size:20px;letter-spacing:.08em;font-weight:700;margin-right:.35em}
+.adi-strip-dot{margin:0 .5em}
+.adi-strip:hover .adi-strip-txt,.adi-strip:focus-visible .adi-strip-txt{opacity:.8}
+.adi-strip:focus-visible{outline:1px solid #000;outline-offset:-5px}
+@media (max-width:640px){
+  .adi-strip{min-height:60px;margin:22px 0;padding:11px 18px}
+  .adi-strip-txt{font-size:11px;letter-spacing:.22em;line-height:1.7}
+  .adi-strip-amt{font-size:16px}
+  .adi-strip-dot{display:none}
+  .adi-strip-sq{display:block}
+}
