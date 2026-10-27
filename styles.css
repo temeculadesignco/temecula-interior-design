@@ -297,7 +297,7 @@ footer .brand .mark-img{height:42px}
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
 .adi-panel::after{content:"";position:absolute;inset:21px;border:1px solid rgba(191,188,189,.28);pointer-events:none;z-index:2}
 .about-split .adi-t{object-fit:contain;max-width:none;position:absolute;right:-12%;bottom:-4%;height:96%;width:auto;opacity:.5;pointer-events:none;z-index:0}
-.adi-inner{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:54px 50px;width:100%}
+.adi-inner{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:40px 50px;width:100%}
 .adi-head{display:flex;align-items:center;gap:12px}
 .adi-emblem{flex:0 0 18px;height:25px;background:var(--tid-metal-gold);-webkit-mask:url(/brand/t-monogram-wine.svg) center/contain no-repeat;mask:url(/brand/t-monogram-wine.svg) center/contain no-repeat}
 .adi-eyebrow{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;font-weight:500;color:var(--tid-silver);margin:0}
@@ -308,10 +308,10 @@ footer .brand .mark-img{height:42px}
   border-top:1px solid rgba(234,168,106,.45);border-bottom:1px solid rgba(234,168,106,.45)}
 .adi-amt{font-family:var(--serif);font-size:clamp(58px,6vw,80px);line-height:.9;font-weight:500;background:var(--tid-metal-gold);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 30px rgba(234,168,106,.18)}
 .adi-for{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tid-silver-hi);line-height:1.6;padding-bottom:6px}
-.adi-list{list-style:none;margin:24px 0 18px}
-.adi-list li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15px;color:var(--tid-cream-2)}
+.adi-list{list-style:none;margin:20px 0 12px}
+.adi-list li{position:relative;padding-left:24px;margin-bottom:8px;font-size:15px;color:var(--tid-cream-2)}
 .adi-list li::before{content:"";position:absolute;left:2px;top:.5em;width:7px;height:7px;transform:rotate(45deg);background:var(--tid-wine);border:1px solid var(--tid-gold)}
-.adi-by{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--tid-silver);margin-bottom:26px}
+.adi-by{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--tid-silver);margin-bottom:20px}
 .adi-by::first-letter{color:var(--tid-silver-hi)}
 .adi-cta{align-self:flex-start;position:relative;display:inline-flex;align-items:center;padding:17px 30px;
   background:var(--tid-metal-gold);background-size:220% 100%;background-position:0 0;color:var(--tid-noir);
@@ -329,7 +329,7 @@ footer .brand .mark-img{height:42px}
 .lede-avatar figcaption span{color:#8a8378;display:block}
 .lede-block .serif-lede{flex:1;min-width:0;margin:0}
 @media(max-width:560px){
-  .adi-inner{padding:40px 30px}
+  .adi-inner{padding:34px 30px}
   .adi-price{margin:0 -30px;padding:16px 30px}
   .adi-panel::before{inset:10px}
   .adi-panel::after{inset:16px}
