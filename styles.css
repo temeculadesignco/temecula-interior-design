@@ -267,3 +267,131 @@ footer .brand .mark-img{height:42px}
 .ig-grid img{width:100%;height:100%;object-fit:cover;transition:.5s}
 .ig-grid a:hover img{transform:scale(1.06);opacity:.85}
 @media(max-width:700px){.ig-grid{grid-template-columns:1fr 1fr}.article-hero{padding:140px 0 56px}}
+
+/* ABOUT: Automated Interior Design feature panel (fills the former founder-photo slot: 100% column width x 640px).
+   Deliberately its own look. Palette sampled from Michael's T monogram files (Oct 26, 2026):
+   flat T files -> wine #8C4A32, noir #1C1914, cream #F3EEE4 / #E8E0D2, beige #D4CBB8;
+   metallic T renders -> base #131111, gold #A15D2F/#EAA86A/#FCEFD5, rose gold #F0BF9F, silver #8A8989/#BFBCBD/#F7F6F6. */
+:root{
+  --tid-noir:#131111;        /* metallic T backdrop */
+  --tid-noir-2:#1C1914;      /* black flat T */
+  --tid-wine:#8C4A32;        /* wine/rust flat T */
+  --tid-wine-deep:#4A2018;   /* derived: wine darkened for depth */
+  --tid-gold-deep:#A15D2F;   /* gold T shadow */
+  --tid-gold:#EAA86A;        /* gold T body */
+  --tid-gold-hi:#FCEFD5;     /* gold T highlight */
+  --tid-rose:#F0BF9F;        /* rose-gold T body */
+  --tid-silver-deep:#8A8989; /* silver T shadow */
+  --tid-silver:#BFBCBD;      /* silver T body */
+  --tid-silver-hi:#F7F6F6;   /* silver T highlight */
+  --tid-cream:#F3EEE4;       /* off-white flat T */
+  --tid-cream-2:#E8E0D2;     /* light cream flat T */
+  --tid-beige:#D4CBB8;       /* warm beige flat T */
+  --tid-metal-gold:linear-gradient(120deg,#A15D2F 0%,#EAA86A 26%,#FCEFD5 48%,#EAA86A 68%,#A15D2F 100%);
+  --tid-metal-silver:linear-gradient(120deg,#8A8989 0%,#F7F6F6 45%,#BFBCBD 70%,#8A8989 100%);
+}
+.adi-panel{position:relative;width:100%;height:640px;overflow:hidden;display:flex;isolation:isolate;color:var(--tid-cream);
+  background:radial-gradient(110% 65% at 105% 105%,rgba(140,74,50,.62),transparent 62%),radial-gradient(70% 45% at -5% -5%,rgba(74,32,24,.85),transparent 70%),var(--tid-noir);
+  box-shadow:0 30px 60px -30px rgba(74,32,24,.75)}
+.adi-panel::before{content:"";position:absolute;inset:14px;padding:1px;background:var(--tid-metal-gold);pointer-events:none;z-index:2;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.adi-panel::after{content:"";position:absolute;inset:21px;border:1px solid rgba(191,188,189,.28);pointer-events:none;z-index:2}
+.about-split .adi-t{object-fit:contain;max-width:none;position:absolute;right:-12%;bottom:-4%;height:96%;width:auto;opacity:.5;pointer-events:none;z-index:0}
+.adi-inner{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:54px 50px;width:100%}
+.adi-head{display:flex;align-items:center;gap:12px}
+.adi-emblem{flex:0 0 18px;height:25px;background:var(--tid-metal-gold);-webkit-mask:url(/brand/t-monogram-wine.svg) center/contain no-repeat;mask:url(/brand/t-monogram-wine.svg) center/contain no-repeat}
+.adi-eyebrow{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;font-weight:500;color:var(--tid-silver);margin:0}
+.adi-title{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.4vw,46px);line-height:1.06;color:var(--tid-cream);margin:20px 0 24px}
+.adi-title em{font-style:italic;color:var(--tid-rose)}
+.adi-price{display:flex;align-items:flex-end;gap:16px;margin:0 -50px;padding:18px 50px 18px;
+  background:linear-gradient(90deg,rgba(140,74,50,.92) 0%,rgba(140,74,50,.55) 55%,rgba(140,74,50,0) 100%);
+  border-top:1px solid rgba(234,168,106,.45);border-bottom:1px solid rgba(234,168,106,.45)}
+.adi-amt{font-family:var(--serif);font-size:clamp(58px,6vw,80px);line-height:.9;font-weight:500;background:var(--tid-metal-gold);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 30px rgba(234,168,106,.18)}
+.adi-for{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tid-silver-hi);line-height:1.6;padding-bottom:6px}
+.adi-list{list-style:none;margin:24px 0 18px}
+.adi-list li{position:relative;padding-left:24px;margin-bottom:10px;font-size:15px;color:var(--tid-cream-2)}
+.adi-list li::before{content:"";position:absolute;left:2px;top:.5em;width:7px;height:7px;transform:rotate(45deg);background:var(--tid-wine);border:1px solid var(--tid-gold)}
+.adi-by{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--tid-silver);margin-bottom:26px}
+.adi-by::first-letter{color:var(--tid-silver-hi)}
+.adi-cta{align-self:flex-start;position:relative;display:inline-flex;align-items:center;padding:17px 30px;
+  background:var(--tid-metal-gold);background-size:220% 100%;background-position:0 0;color:var(--tid-noir);
+  font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;
+  box-shadow:inset 0 0 0 1px rgba(252,239,213,.55),0 12px 28px -12px rgba(140,74,50,.95);transition:background-position .6s,transform .3s}
+.adi-cta::after{content:"";position:absolute;inset:-5px;border:1px solid rgba(191,188,189,.45);pointer-events:none}
+.adi-cta:hover{background-position:100% 0;transform:translateY(-1px)}
+.adi-cta:focus-visible{outline:2px solid var(--tid-silver-hi);outline-offset:6px}
+/* ABOUT: founder avatar + lede as one block */
+.lede-block{display:flex;align-items:flex-start;gap:22px}
+.lede-avatar{margin:0;flex:0 0 92px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.about-split .lede-avatar img{width:84px;height:84px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);display:block}
+.lede-avatar figcaption{margin-top:8px;font-size:10.5px;line-height:1.35;letter-spacing:.03em}
+.lede-avatar figcaption b{display:block;font-weight:500;color:var(--ink)}
+.lede-avatar figcaption span{color:#8a8378;display:block}
+.lede-block .serif-lede{flex:1;min-width:0;margin:0}
+@media(max-width:560px){
+  .adi-inner{padding:40px 30px}
+  .adi-price{margin:0 -30px;padding:16px 30px}
+  .adi-panel::before{inset:10px}
+  .adi-panel::after{inset:16px}
+  .about-split .adi-t{opacity:.28;right:-24%;height:88%}
+  .adi-title{font-size:34px;margin:16px 0 20px}
+  .adi-cta{padding:16px 22px;font-size:11px;letter-spacing:.16em}
+  .lede-block{gap:16px}
+  .lede-avatar{flex-basis:74px}
+  .about-split .lede-avatar img{width:66px;height:66px}
+  .lede-avatar figcaption{font-size:9.5px}
+}
+
+/* AUTOMATED INTERIOR DESIGN payment page */
+.adp-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:start}
+.adp-list{list-style:none;border-top:1px solid var(--line)}
+.adp-list li{padding:22px 0 22px 30px;border-bottom:1px solid var(--line);position:relative}
+.adp-list li::before{content:"";position:absolute;left:0;top:34px;width:14px;height:1px;background:var(--gold)}
+.adp-list b{display:block;font-family:var(--serif);font-size:23px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.adp-list span{font-size:15.5px;color:#3d3833}
+.adp-upgrade-note{background:var(--cream);padding:34px 32px;margin:40px 0 30px;border-left:2px solid var(--gold)}
+.adp-upgrade-note h3{margin:10px 0 8px}
+.adp-by{font-family:var(--serif);font-style:italic;font-size:21px;color:#2c2824}
+.adp-pay{background:var(--charcoal);color:#fff;padding:46px 40px;position:sticky;top:110px;outline:1px solid rgba(201,164,88,.55);outline-offset:-14px}
+.adp-pay-title{font-family:var(--serif);color:#fff;font-size:32px;margin:12px 0 26px}
+.adp-line,.adp-total{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-top:1px solid rgba(255,255,255,.14)}
+.adp-line span{font-size:15px;color:rgba(255,255,255,.85)}
+.adp-line b{font-family:var(--serif);font-size:24px;font-weight:500;color:#fff}
+.adp-total{border-bottom:1px solid rgba(255,255,255,.14);margin-bottom:22px}
+.adp-total span{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-light)}
+.adp-total b{font-family:var(--serif);font-size:48px;line-height:1;font-weight:500;color:var(--gold)}
+.adp-check{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-top:1px solid rgba(255,255,255,.14);cursor:pointer}
+.adp-check input{position:absolute;opacity:0;width:1px;height:1px}
+.adp-check .box{flex:0 0 22px;height:22px;border:1px solid var(--gold);margin-top:2px;position:relative;transition:.2s}
+.adp-check input:checked + .box{background:var(--gold)}
+.adp-check input:checked + .box::after{content:"";position:absolute;left:7px;top:3px;width:6px;height:11px;border:solid var(--charcoal);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.adp-check input:focus-visible + .box{outline:2px solid var(--gold-light);outline-offset:2px}
+.adp-check b{display:block;font-weight:500;font-size:15px;color:#fff}
+.adp-check small{display:block;font-size:13px;color:rgba(255,255,255,.7);margin-top:4px;line-height:1.5}
+.adp-terms{background:rgba(255,255,255,.05);padding:20px 22px;margin-bottom:6px}
+.adp-terms p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.6;margin-bottom:10px}
+.adp-terms p:last-child{margin-bottom:0}
+.adp-terms b{color:var(--gold-light);font-weight:500}
+.adp-terms a{color:#fff;text-decoration:underline}
+.adp-ack{border-top:0;font-size:14px;color:rgba(255,255,255,.9)}
+.adp-paybtn{display:block;text-align:center;width:100%;margin-top:6px;font-size:13px}
+.adp-paybtn.is-disabled{opacity:.45;cursor:not-allowed}
+.adp-fine{font-size:12px;color:rgba(255,255,255,.55);margin-top:14px;text-align:center}
+@media(max-width:960px){.adp-grid{grid-template-columns:1fr;gap:50px}.adp-pay{position:static}}
+@media(max-width:560px){.adp-pay{padding:40px 26px;outline-offset:-10px}.adp-upgrade-note{padding:28px 22px}}
+
+/* PAYMENT CARD: echoes the Automated Interior Design panel palette (rest of the page unchanged) */
+.adp-pay{background:radial-gradient(110% 55% at 105% 105%,rgba(140,74,50,.5),transparent 62%),radial-gradient(70% 40% at -5% -5%,rgba(74,32,24,.8),transparent 70%),var(--tid-noir);outline:none;isolation:isolate}
+.adp-pay::before{content:"";position:absolute;inset:12px;padding:1px;background:var(--tid-metal-gold);pointer-events:none;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.adp-pay .adi-eyebrow{color:var(--tid-silver)}
+.adp-pay-title{color:var(--tid-cream)}
+.adp-total b{background:var(--tid-metal-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.adp-check .box{border-color:var(--tid-gold)}
+.adp-check input:checked + .box{background:var(--tid-metal-gold)}
+.adp-check input:checked + .box::after{border-color:var(--tid-noir)}
+.adp-terms{background:rgba(140,74,50,.18);border-left:2px solid var(--tid-wine)}
+.adp-terms b{color:var(--tid-gold)}
+.adp-paybtn.btn{background:var(--tid-metal-gold);background-size:220% 100%;color:var(--tid-noir);border:0;font-weight:600;box-shadow:inset 0 0 0 1px rgba(252,239,213,.55),0 12px 28px -12px rgba(140,74,50,.95);transition:background-position .6s,opacity .3s}
+.adp-paybtn.btn:hover{background-position:100% 0}
+.adp-pay::after{content:"";position:absolute;right:-8%;bottom:-2%;width:62%;height:70%;background:url(/brand/t-metal-silver.webp) right bottom/contain no-repeat;opacity:.1;pointer-events:none;z-index:-1}
