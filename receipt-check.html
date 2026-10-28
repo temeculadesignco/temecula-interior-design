@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Receipt | Temecula Interior Design</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#211F1F">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=5">
+<style>.rc-wrap{max-width:640px;margin:0 auto;padding:120px 24px 110px;text-align:center}.rc-wrap h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:44px;line-height:1.15;margin:12px 0 18px;color:#211F1F}.rc-wrap p{font-size:17px;line-height:1.75;color:#3d3833;margin:0 0 18px}.rc-wrap form{margin:26px 0 10px}.rc-actions{margin-top:30px}</style>
+</head>
+<body class="inner">
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/">
+      <img class="mark-img" src="/logo.png" alt="Temecula Interior Design logo" width="30" height="38">
+      <span class="wm"><b>Temecula</b><span>Interior Design</span></span>
+    </a>
+  </div>
+</header>
+<main>
+  <div class="rc-wrap" id="rc">
+    <p class="eyebrow">Automated Interior Design</p>
+    <h1 id="rc-h">Thank you</h1>
+    <div id="rc-b"><p>Thanks for letting us know.</p></div>
+    <div class="rc-actions"><a class="btn btn-line" href="/">Back to home</a></div>
+  </div>
+</main>
+<script>
+(function(){
+  var EP='https://temeculadecor.app.n8n.cloud/webhook/aid-receipt-confirm';
+  var q=new URLSearchParams(location.search), st=q.get('status')||'', s=q.get('s')||'', t=q.get('t')||'', n=parseInt(q.get('n')||'0',10)||0;
+  var okS=/^cs_(live|test)_[A-Za-z0-9_]{8,200}$/.test(s), okT=/^[0-9a-f]{32}$/.test(t);
+  var H=document.getElementById('rc-h'), B=document.getElementById('rc-b');
+  function P(x){var p=document.createElement('p');p.textContent=x;return p;}
+  function set(h,ps){H.textContent=h;B.innerHTML='';ps.forEach(function(x){B.appendChild(typeof x==='string'?P(x):x);});}
+  function form(fields,label){var f=document.createElement('form');f.method='post';f.action=EP;Object.keys(fields).forEach(function(k){var i=document.createElement('input');i.type='hidden';i.name=k;i.value=fields[k];f.appendChild(i);});if(label){var b=document.createElement('button');b.type='submit';b.className='btn btn-gold';b.textContent=label;f.appendChild(b);}return f;}
+  var phone='If you have any questions, email admin@temeculainteriordesign.com or call (951) 718-7778.';
+  if(st==='confirmed') set('Thank you',['We\u2019ve noted that you received your Stripe receipt, so we won\u2019t send a second one.',phone]);
+  else if(st==='confirm'&&okS&&okT) set('Did you receive your Stripe receipt?',['Please confirm below and we won\u2019t send a second receipt.',form({s:s,t:t,src:'email'},'Yes, I received it')]);
+  else if(st==='sent') set('Your receipt is on its way',['We\u2019ve already emailed you a paid receipt from Temecula Interior Design. Please check your inbox, including spam.',phone]);
+  else if(st==='closed') set('No receipt needed',['This payment has been refunded, so no receipt will be sent.',phone]);
+  else if(st==='wait'&&okS&&/^cs_live_/.test(s)){set('One moment\u2026',['We\u2019re finishing setting up your project.']);var f=form({s:s,src:'ty',n:String(Math.min(n,9))});document.body.appendChild(f);setTimeout(function(){f.submit();},4000);}
+  else if(st==='later') set('Thank you',['We couldn\u2019t record your answer just yet. There\u2019s nothing you need to do: we\u2019ll email you shortly to check whether your Stripe receipt arrived.',phone]);
+  else if(st==='invalid') set('This link isn\u2019t valid',['Please use the button in the email we sent you.',phone]);
+  else set('Something went wrong',['We couldn\u2019t record your answer. There\u2019s nothing you need to do.',phone]);
+  if(history.replaceState) history.replaceState(null,'',location.pathname+(st&&st!=='confirm'&&st!=='wait'?'?status='+encodeURIComponent(st):''));
+})();
+</script>
+</body>
+</html>

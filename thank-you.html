@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css?v=5">
-<style>.article-body ol{margin:0 0 22px 22px}.article-body ol li{font-size:17px;line-height:1.8;color:#3d3833;margin-bottom:6px}.ty-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.article-body ul{margin:0 0 22px 22px}.article-body li{font-size:17px;line-height:1.8;color:#3d3833;margin-bottom:6px}.article-body a{text-decoration:underline}</style>
+<style>.article-body ol{margin:0 0 22px 22px}.article-body ol li{font-size:17px;line-height:1.8;color:#3d3833;margin-bottom:6px}.ty-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}.article-body ul{margin:0 0 22px 22px}.article-body li{font-size:17px;line-height:1.8;color:#3d3833;margin-bottom:6px}.article-body a{text-decoration:underline}.rc-box{background:#F6F2EC;border:1px solid #E4DED4;padding:28px 30px;margin:8px 0 34px}.rc-box h2{margin-top:0}.rc-form{margin:6px 0 16px}.rc-note{font-size:15px!important;color:#7A736C!important;margin:0!important}</style>
 </head>
 <body class="inner">
 
@@ -52,7 +52,16 @@
   <section>
     <div class="wrap">
       <div class="article-body">
-<p class="lead">Your payment went through and your project is now set up with our design team. Your receipt will be emailed to you.</p>
+<p class="lead">Your payment went through and your project is now set up with our design team. Stripe, our payment processor, emails your receipt right away.</p>
+<div class="rc-box" id="rc-box" hidden>
+<h2>Did you receive your Stripe receipt?</h2>
+<p>Stripe emails your receipt within a few minutes. If it has arrived, let us know and we won&rsquo;t send a second one.</p>
+<form method="post" action="https://temeculadecor.app.n8n.cloud/webhook/aid-receipt-confirm" class="rc-form">
+<input type="hidden" name="s" id="rc-s" value=""><input type="hidden" name="src" value="ty">
+<button type="submit" class="btn btn-gold">Yes, I received it</button>
+</form>
+<p class="rc-note">If it hasn&rsquo;t arrived, there&rsquo;s nothing you need to do. We&rsquo;ll email you a paid receipt from Temecula Interior Design within 24 hours.</p>
+</div>
 <h2>What happens next</h2>
 <ol>
 <li><b>Intake call.</b> We&rsquo;ll reach out within one business day to book your intake call.</li>
@@ -105,5 +114,6 @@
   </div>
 </footer>
 <script src="/script.js?v=2"></script>
+<script>(function(){var s=new URLSearchParams(location.search).get('session_id')||'';if(/^cs_live_[A-Za-z0-9_]{8,200}$/.test(s)){document.getElementById('rc-s').value=s;document.getElementById('rc-box').hidden=false;}})();</script>
 </body>
 </html>
