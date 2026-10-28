@@ -98,10 +98,10 @@
 </main>
 
 <script>
-/* Stripe Payment Links. PLACEHOLDER values: replace with the real Payment Link URLs once created. */
+/* Stripe Payment Links (live): $1,000 design only and $1,500 design + linens & simple decor. */
 var PAY_LINKS = {
-  design:       "PLACEHOLDER_STRIPE_LINK_DESIGN_1000",
-  designLinens: "PLACEHOLDER_STRIPE_LINK_DESIGN_LINENS_1500"
+  design:       "https://buy.stripe.com/6oUbJ0a8E35q2CNfuxeUU09",
+  designLinens: "https://buy.stripe.com/9B628q6Ws8pKa5f1DHeUU0a"
 };
 (function(){
   var lin=document.getElementById('linens'), ack=document.getElementById('ack'),
@@ -115,11 +115,9 @@ var PAY_LINKS = {
     btn.classList.toggle('is-disabled', !ack.checked);
     btn.setAttribute('aria-disabled', String(!ack.checked));
     btn.href = ready ? url : '#pay';
-    btn.dataset.pending = (/^https:\/\//.test(url)) ? '' : '1';
   }
   btn.addEventListener('click', function(e){
-    if(!ack.checked){ e.preventDefault(); ack.focus(); return; }
-    if(btn.dataset.pending){ e.preventDefault(); alert('Card payment is being set up. Please call (951) 718-7778 or email admin@temeculainteriordesign.com to book your design.'); }
+    if(!ack.checked || !/^https:\/\//.test(btn.href)){ e.preventDefault(); ack.focus(); }
   });
   lin.addEventListener('change', sync); ack.addEventListener('change', sync); sync();
 })();
