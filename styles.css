@@ -424,3 +424,34 @@ footer .brand .mark-img{height:42px}
   .adi-strip-dot{display:none}
   .adi-strip-sq{display:block}
 }
+
+/* ---- Home hero: Automated Interior Design collectible seal sticker ---- */
+.adi-seal{position:absolute;z-index:3;top:128px;right:clamp(28px,6vw,96px);width:clamp(150px,15vw,200px);aspect-ratio:1;display:block;text-decoration:none;border-radius:50%;-webkit-tap-highlight-color:transparent}
+.adi-seal-tilt{position:relative;display:block;width:100%;height:100%;transform:rotate(-9deg);transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .45s;filter:drop-shadow(0 14px 18px rgba(0,0,0,.45)) drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+.adi-seal:hover .adi-seal-tilt,.adi-seal:focus-visible .adi-seal-tilt{transform:translateY(-6px) rotate(-5deg) scale(1.04);filter:drop-shadow(0 22px 26px rgba(0,0,0,.5)) drop-shadow(0 3px 4px rgba(0,0,0,.3))}
+.adi-seal:focus-visible{outline:2px solid var(--tid-gold-hi);outline-offset:6px}
+.adi-seal-svg{display:block;width:100%;height:100%;overflow:visible}
+.adi-seal-ring{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;fill:var(--tid-gold-hi)}
+.adi-seal-ring-sm{font-size:8px;letter-spacing:.14em;fill:var(--tid-silver-hi)}
+.adi-seal-kicker{font-family:var(--sans);font-size:7px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;fill:var(--tid-wine-deep)}
+.adi-seal-amt{font-family:var(--serif);font-size:33px;font-weight:700;letter-spacing:.01em;fill:var(--tid-wine-deep)}
+.adi-seal-sq{font-family:var(--sans);font-size:6.4px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;fill:var(--tid-wine-deep)}
+/* holographic foil sweep, clipped to the die-cut disc; 4s loop like the home strip */
+.adi-seal-sheen{position:absolute;inset:0;border-radius:50%;pointer-events:none;mix-blend-mode:screen;
+  background:linear-gradient(115deg,rgba(255,255,255,0) 38%,rgba(252,239,213,.55) 45%,rgba(255,255,255,.9) 50%,rgba(191,188,189,.5) 54%,rgba(240,191,159,.35) 58%,rgba(255,255,255,0) 64%) 120% 0/260% 100% no-repeat,
+             linear-gradient(115deg,rgba(255,255,255,0) 44%,rgba(247,246,246,.45) 50%,rgba(255,255,255,0) 56%) 120% 0/260% 100% no-repeat;
+  animation:adiSealSheen 4s ease-in-out infinite}
+@keyframes adiSealSheen{
+  0%{background-position:120% 0,120% 0}
+  30%{background-position:-20% 0,120% 0}
+  37.5%{background-position:-20% 0,95% 0}
+  70%{background-position:-20% 0,-20% 0}
+  100%{background-position:-20% 0,-20% 0}}
+@media (max-width:640px){
+  .adi-seal{top:82px;right:14px;width:104px}
+  .adi-seal-tilt{transform:rotate(-8deg)}
+}
+@media (prefers-reduced-motion:reduce){
+  .adi-seal-sheen{animation:none;background-position:50% 0,120% 0}
+  .adi-seal-tilt{transition:none}
+}
