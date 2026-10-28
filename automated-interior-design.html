@@ -72,25 +72,33 @@
       </div>
       <aside class="adp-pay" id="pay">
         <p class="adi-eyebrow">Secure Card Payment</p>
-        <h3 class="adp-pay-title">Automated Interior Design</h3>
+        <h3 class="adp-pay-title">Automated Interior Design &ndash; $1,000</h3>
         <div class="adp-line"><span>Full home design, up to 3,000 sq ft &middot; kitchens &amp; baths included</span><b>$1,000</b></div>
-        <label class="adp-check">
-          <input type="checkbox" id="linens">
+        <label class="adp-check adp-jsonly" for="linens">
+          <input type="checkbox" id="linens" name="linens" value="1" aria-describedby="linens-desc">
           <span class="box" aria-hidden="true"></span>
-          <span><b>Add linens &amp; simple decor &nbsp;+$500</b><small>Tabletops, beds, couches, sofas, chairs and more, including the color palette for all linens.</small></span>
+          <span><b>Add Linens &amp; Simple Decor Upgrade (+$500)</b><small id="linens-desc">Tabletops, beds, couches, sofas, chairs and more, including the color palette for all linens.</small></span>
         </label>
-        <div class="adp-total"><span>Total</span><b id="total">$1,000</b></div>
+        <div class="adp-total adp-jsonly"><span id="total-label">Total</span><b id="total" aria-live="polite" aria-atomic="true">$1,000</b></div>
         <div class="adp-terms">
           <p><b>Refund policy.</b> You may request a full refund within 3 days of purchase. Email <a href="mailto:admin@temeculainteriordesign.com">admin@temeculainteriordesign.com</a> or call <a href="tel:+19517187778">(951) 718-7778</a>.</p>
           <p><b>Terms.</b> This payment covers the interior design only: a full modern minimalist design for one home up to 3,000 sq ft, kitchens and bathrooms included, with up to 3 revisions, presented and hand delivered in person by Michael or one of our designers, plus the optional linens &amp; simple decor upgrade if selected above. Purchasing, furnishings, installation and fulfillment are not included and are invoiced separately after the presentation. See our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
           <p><b>Cabinet &amp; appliance CAD sheets.</b> Should CAD drawings or equivalent sheets for the kitchen and bathroom cabinets and appliances be requested, and the client or homeowner fulfills the design through an alternate company and contractor, they will be furnished at a $200 surcharge.</p>
         </div>
-        <label class="adp-check adp-ack">
+        <label class="adp-check adp-ack adp-jsonly" for="ack">
           <input type="checkbox" id="ack">
           <span class="box" aria-hidden="true"></span>
           <span>I have read and agree to the refund policy and terms above.</span>
         </label>
-        <a class="btn btn-gold adp-paybtn is-disabled" id="paybtn" href="#pay" aria-disabled="true">Pay $1,000 by card</a>
+        <a class="btn btn-gold adp-paybtn adp-jsonly is-disabled" id="paybtn" href="#pay" aria-disabled="true">Pay $1,000 by card</a>
+        <noscript>
+          <style>.adp-jsonly{display:none!important}.adp-nojs{border-top:1px solid rgba(255,255,255,.14);padding-top:18px}.adp-nojs p{font-size:13px;color:rgba(255,255,255,.82);line-height:1.6;margin-bottom:14px}.adp-nojs .adp-paybtn+.adp-paybtn{margin-top:12px}</style>
+          <div class="adp-nojs">
+            <p>By continuing to payment you agree to the refund policy and terms above. Choose one option; each is a single payment with one receipt.</p>
+            <a class="btn btn-gold adp-paybtn" href="https://buy.stripe.com/6oUbJ0a8E35q2CNfuxeUU09">Pay $1,000 by card: Automated Interior Design</a>
+            <a class="btn btn-gold adp-paybtn" href="https://buy.stripe.com/9B628q6Ws8pKa5f1DHeUU0a">Pay $1,500 by card: with Linens &amp; Simple Decor Upgrade</a>
+          </div>
+        </noscript>
         <p class="adp-fine">You&rsquo;ll enter your name, email, phone and property address on the secure Stripe checkout page.</p>
       </aside>
     </div>
