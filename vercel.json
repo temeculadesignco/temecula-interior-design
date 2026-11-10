@@ -2,6 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/automated-interior-design", "destination": "/signature-interior-design", "permanent": true },
+    { "source": "/automated-interior-design.html", "destination": "/signature-interior-design", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -480,3 +480,16 @@ footer .brand .mark-img{height:42px}
   .book-modal-box{height:100%;max-width:none}
   .book-modal-close{top:8px;right:8px;color:var(--charcoal);background:#fff}
 }
+
+/* Limited time special price display (Signature Interior Design) */
+.adp-offer{display:flex;align-items:baseline;justify-content:flex-start;gap:16px;flex-wrap:wrap;margin-top:22px}
+.adp-offer s{font-family:var(--serif);font-size:30px;opacity:.65;text-decoration-thickness:2px}
+.adp-offer b{font-family:var(--serif);font-size:54px;font-weight:600;color:var(--gold-light,#EAA86A);line-height:1}
+.adp-offer span{font-size:12px;letter-spacing:.28em;text-transform:uppercase;border:1px solid currentColor;padding:6px 12px;color:var(--gold-light,#EAA86A)}
+.adp-special{font-size:14px;letter-spacing:.06em;color:var(--gold-light);margin:-14px 0 22px}
+.adp-special b{font-family:var(--serif);font-size:22px;font-weight:600}
+.adp-was{font-weight:400;opacity:.6;margin-right:6px}
+.adi-strip-was{font-weight:500;opacity:.8;text-decoration-thickness:1.5px;margin-right:.2em}
+.adi-seal-sq{text-decoration:line-through;text-decoration-thickness:.8px}
+.adi-for s{opacity:.8}
+.adp-line b{white-space:nowrap}
